@@ -3,15 +3,27 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUI = require('swagger-ui-express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
+const jsonServer = require('json-server')
 
 const app = express();
 
+// app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+// app.use(jsonServer.defaults());
+
 // import routes
 const productsRoute = require('./routes/products');
+const ordersRoute = require('./routes/orders');
 const usersRoute = require('./routes/users');
 
 // Use routes
 app.use('/api/products', productsRoute);
+app.use('/api/orders', ordersRoute);
 app.use('/api/users', usersRoute);
 
 
