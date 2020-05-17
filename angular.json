@@ -28,6 +28,11 @@
               "src/styles.css"
             ],
             "scripts": [
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/nouislider.min.js",
+              "src/assets/js/jquery.zoom.min.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
